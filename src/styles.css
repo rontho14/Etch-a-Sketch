@@ -1,0 +1,14 @@
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#grid-container {
+  flex-direction: column;
+  width: 90vw; 
+  height: 90vw;
+  max-width: 480px;
+  max-height: 480px;
+  border: 1px solid black;
+}
