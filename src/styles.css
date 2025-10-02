@@ -1,12 +1,18 @@
 body {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 
+button {
+    margin: 20px;
+}
+
 #grid-container {
+  display: flex;
   flex-direction: column;
-  width: 90vw; 
+  width: 90vw;
   height: 90vw;
   max-width: 480px;
   max-height: 480px;
