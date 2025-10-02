@@ -35,30 +35,7 @@ This project is a browser-based implementation of an "Etch-a-Sketch" style drawi
 3.  **Open in Browser:**
     Open the `index.html` file directly in your web browser.
 
----
 
-## 📐 Implementation Details
-
-### 1. Grid Structure with Flexbox
-
-The core challenge was creating a true grid (rows and columns) without using the **CSS Grid** module, as per project constraints.
-
-* **Container Setup:** A single main `container` is styled with `display: flex;` and `flex-direction: column;`. This makes the container a flexible column of **rows**.
-* **Row Creation:** In JavaScript, we first generate the specified number of **rows** (each represented by a `div` element).
-* **Row Styling:** Each row is also styled with `display: flex;` and `flex: 1;` (or `flex-grow: 1;`) to ensure it takes up an equal height of the main container. This makes the row a flexible **row** of squares.
-* **Square Creation:** Inside each row, the specified number of **squares** are generated.
-* **Square Sizing:** Each square is given a `flex: 1;` property. Since the parent is a Flexbox row, this ensures all squares in that row are of equal width and collectively fill the entire row width. The height is inherently constrained by the row's height.
-
-This nested Flexbox approach (`flex-direction: column` for the main container and `flex-direction: row` (the default) for the rows) effectively simulates a robust grid.
-
-### 2. Custom Grid Resizing
-
-The `newGrid()` button function:
-
-1.  Uses the `prompt()` method to get the desired number of squares per side from the user.
-2.  Validates the input, ensuring it's a number and doesn't exceed the limit of **100**.
-3.  **Removes** the existing grid elements from the DOM.
-4.  Calls the grid generation function with the new size. Since the total container width and height are fixed (e.g., `960px`), the new squares are automatically sized by Flexbox to fit perfectly within the same space.
 
 ### 3. Hover Effect and Progressive Darkening (Extra Credit)
 
